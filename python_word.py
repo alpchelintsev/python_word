@@ -4,12 +4,12 @@
 # ReplaceAll means to replace all occurrences,
 # App is an object of Word.Application
 def StringReplace(W, SearchStr, ReplaceStr, ReplaceAll):
-  Word.Selection.Find.ClearFormatting()
-  Word.Selection.Find.Replacement.ClearFormatting()
+  W.Selection.Find.ClearFormatting()
+  W.Selection.Find.Replacement.ClearFormatting()
   if ReplaceAll:
-    Word.Selection.Find.Execute(SearchStr, False, False, False, False, False, True, 1, True, ReplaceStr, 2)
+    W.Selection.Find.Execute(SearchStr, False, False, False, False, False, True, 1, True, ReplaceStr, 2)
   else:
-    Word.Selection.Find.Execute(SearchStr, False, False, False, False, False, True, 1, True, ReplaceStr, 1)
+    W.Selection.Find.Execute(SearchStr, False, False, False, False, False, True, 1, True, ReplaceStr, 1)
 
 # InsertFile inserts a document from a file with name in FN
 def InsertFile(W, FN):
