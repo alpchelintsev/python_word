@@ -2,7 +2,7 @@
 
 # StringReplace replaces the text from variable SearchStr by text from ReplaceStr,
 # ReplaceAll means to replace all occurrences,
-# App is an object of Word.Application
+# W is an object of Word.Application
 def StringReplace(W, SearchStr, ReplaceStr, ReplaceAll):
   W.Selection.Find.ClearFormatting()
   W.Selection.Find.Replacement.ClearFormatting()
